@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Chúc Mừng 20/10 Các Bạn Nữ 10A8 💖</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100dvh;
+      overflow: hidden;
+      background-color: #05050a;
+      color: #ffffff;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .font-typewriter {
+      font-family: 'Courier Prime', monospace;
+      letter-spacing: 0.06em;
+    }
+
+    /* Chữ phát sáng giống video */
+    .cyber-text {
+      color: #f0fdfa;
+      text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.95),
+        0 0 18px rgba(0, 247, 255, 0.75),
+        0 0 34px rgba(0, 247, 255, 0.45);
+    }
+
+    .pink-neon-text {
+      color: #ffd6e7;
+      text-shadow:
+        0 0 8px rgba(255, 182, 213, 0.95),
+        0 0 20px rgba(255, 105, 180, 0.8);
+    }
+
+    /* ================= ĐÔI MẮT ROBOT NEON CYAN ================= */
+    .eyes-wrapper {
+      position: fixed;
+      left: 50%;
+      top: 44%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 44px;
+      transition: all 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: 25;
+      pointer-events: none;
+    }
+
+    .eye-unit {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .cyber-eye {
+      width: 106px;
+      height: 102px;
+      background: radial-gradient(circle at 50% 45%, #88ffff 0%, #00f2fe 55%, #00c6ff 100%);
+      border-radius: 24px;
+      box-shadow:
+        0 0 22px #00f7ff,
+        0 0 46px rgba(0, 247, 255, 0.8),
+        0 0 80px rgba(0, 247, 255, 0.45),
+        inset 0 0 16px rgba(255, 255, 255, 0.8);
+      transition: all 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* Vệt má hồng //// dưới mắt */
+    .eye-blush {
+      margin-top: 9px;
+      font-family: monospace;
+      font-weight: 900;
+      font-size: 15px;
+      letter-spacing: 3px;
+      color: #38f9ff;
+      text-shadow: 0 0 10px #00f7ff;
+      opacity: 0.85;
+      transform: skewX(-18deg);
+      transition: opacity 0.3s;
+    }
+
+    /* 1. Hơi nheo mắt khen đẹp (Scene 1) */
+    .eyes-squint .cyber-eye {
+      height: 74px;
+      border-radius: 20px;
+    }
+
+    /* 2. Mắt thu nhỏ nhìn sang Áo dài (Scene 2) */
+    .eyes-scene-2 {
+      top: 46%;
+      left: 42%;
+      gap: 32px;
+      transform: translate(-50%, -50%) scale(0.76);
+    }
+
+    /* 3. Mắt cong cười hạnh phúc (Scene 3) */
+    .eyes-happy-arc {
+      top: 40%;
+    }
+    .eyes-happy-arc .cyber-eye {
+      width: 92px;
+      height: 24px;
+      border-radius: 0 0 60px 60px;
+      background: #00f7ff;
+      transform: translateY(10px) rotate(-4deg);
+    }
+    .eyes-happy-arc .eye-unit:last-child .cyber-eye {
+      transform: translateY(10px) rotate(4deg);
+    }
+
+    /* 4. Nháy 1 mắt chúc sức khỏe (Scene 4) */
+    .eyes-wink-left {
+      top: 43%;
+    }
+    .eyes-wink-left .eye-unit:first-child .cyber-eye {
+      width: 70px;
+      height: 20px;
+      border-radius: 0 0 50px 50px;
+      transform: translateY(12px);
+    }
+    .eyes-wink-left .eye-unit:last-child .cyber-eye {
+      width: 108px;
+      height: 106px;
+    }
+
+    /* 5. Đứng bên trái trên đĩa nhạc (Scene 6) */
+    .eyes-music-pos {
+      left: 34%;
+      top: 36%;
+      gap: 28px;
+      transform: translate(-50%, -50%) scale(0.76);
+    }
+
+    /* Mắt nhắm ngang theo nhịp nhạc cuối video (00:45 - 00:54) */
+    .eyes-music-line .cyber-eye {
+      height: 14px !important;
+      border-radius: 999px !important;
+    }
+
+    /* Chớp mắt tự nhiên */
+    .eye-blink .cyber-eye {
+      height: 7px !important;
+      border-radius: 999px !important;
+    }
+
+    /* ================= TỐI ƯU RIÊNG CHO ĐIỆN THOẠI (MÀN HÌNH DỌC) ================= */
+    @media (max-width: 640px) {
+      .cyber-eye {
+        width: 76px;
+        height: 74px;
+        border-radius: 18px;
+      }
+      .eyes-wrapper {
+        gap: 26px;
+        top: 42%;
+      }
+      .eye-blush {
+        font-size: 12px;
+        margin-top: 7px;
+      }
+      .eyes-squint .cyber-eye {
+        height: 54px;
+      }
+      .eyes-scene-2 {
+        left: 36%;
+        top: 40%;
+        transform: translate(-50%, -50%) scale(0.72);
+      }
+      .eyes-happy-arc .cyber-eye {
+        width: 72px;
+        height: 20px;
+      }
+      .eyes-wink-left {
+        top: 34%;
+        transform: translate(-50%, -50%) scale(0.85);
+      }
+      .eyes-wink-left .eye-unit:last-child .cyber-eye {
+        width: 82px;
+        height: 80px;
+      }
+      /* Trên điện thoại: Mắt nằm phía trên bên trái, Đĩa nhạc ở giữa trái, Cô gái ở dưới phải -> Không bao giờ đè nhau */
+      .eyes-music-pos {
+        left: 34%;
+        top: 25%;
+        gap: 20px;
+        transform: translate(-50%, -50%) scale(0.68);
+      }
+    }
+
+    /* ================= NÚT KIM CƯƠNG PHÁT SÁNG (SCENE 3) ================= */
+    .diamond-btn-wrap {
+      position: relative;
+      width: 88px;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .diamond-outer {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      transform: rotate(45deg);
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.38), rgba(30, 64, 175, 0.7));
+      border: 2px solid #7dd3fc;
+      box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.9),
+        0 0 55px rgba(56, 189, 248, 0.5),
+        inset 0 0 15px rgba(186, 230, 253, 0.65);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: diamondPulse 2s ease-in-out infinite;
+    }
+
+    .diamond-btn-wrap:active .diamond-outer,
+    .diamond-btn-wrap:hover .diamond-outer {
+      transform: rotate(45deg) scale(1.12);
+      box-shadow: 0 0 38px rgba(56, 189, 248, 1), 0 0 70px rgba(56, 189, 248, 0.75);
+    }
+
+    @keyframes diamondPulse {
+      0%, 100% { filter: brightness(1); transform: rotate(45deg) scale(1); }
+      50% { filter: brightness(1.22); transform: rotate(45deg) scale(1.08); }
+    }
+
+    /* ================= ĐĨA THAN VINYL XOAY (SCENE 6) ================= */
+    .vinyl-disc {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, #18181b 0 14%, #f472b6 15% 28%, #18181b 29% 38%, #27272a 39% 41%, #18181b 42% 55%, #3f3f46 56% 58%, #111115 59% 100%);
+      border: 2px solid rgba(244, 114, 182, 0.6);
+      box-shadow: 0 0 26px rgba(244, 114, 182, 0.4);
+      animation: spinVinyl 5.5s linear infinite;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .vinyl-disc {
+        width: 112px;
+        height: 112px;
+      }
+    }
+
+    .vinyl-disc::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 0deg,
+        transparent 0deg 35deg,
+        rgba(255, 255, 255, 0.15) 40deg 55deg,
+        transparent 60deg 215deg,
+        rgba(255, 255, 255, 0.15) 220deg 235deg,
+        transparent 240deg 360deg
+      );
+    }
+
+    @keyframes spinVinyl {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .sway-slow {
+      animation: swaySlow 4s ease-in-out infinite;
+      transform-origin: bottom center;
+    }
+    @keyframes swaySlow {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2.5deg); }
+    }
+  </style>
+</head>
+<body class="relative w-full h-[100dvh] overflow-hidden select-none">
+
+  <!-- CANVAS NỀN CHUNG (Sao, Hoa rơi, Cỏ, Hoa dại, Chòm sao, Bướm, Pháo tim khi chạm) -->
+  <canvas id="bgCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+  <!-- SÂN KHẤU CHÍNH -->
+  <main id="storyStage" class="relative w-full h-[100dvh] flex flex-col items-center justify-center overflow-hidden z-10">
+
+    <!-- Dòng chữ câu chuyện phía trên -->
+    <div id="topCaptionWrap" class="fixed top-[10%] sm:top-[14%] inset-x-0 text-center px-5 z-30 pointer-events-none transition-all duration-700">
+      <p id="topCaption" class="font-typewriter text-base sm:text-3xl cyber-text leading-relaxed"></p>
+    </div>
+
+    <!-- Dòng chữ phụ góc trái (Scene 2: "à thì cũng sắp 20/10 rồi") -->
+    <div id="leftCaptionWrap" class="fixed top-[14%] sm:top-[17%] left-[7%] sm:left-[18%] text-center z-30 pointer-events-none opacity-0 transition-opacity duration-700">
+      <p class="font-typewriter text-base sm:text-2xl pink-neon-text leading-relaxed">
+        à thì cũng sắp<br/>20/10 rồi
+      </p>
+    </div>
+
+    <!-- ĐÔI MẮT ROBOT NEON CYAN TRUNG TÂM -->
+    <div id="robotEyes" class="eyes-wrapper">
+      <div class="eye-unit">
+        <div class="cyber-eye"></div>
+        <div class="eye-blush">////</div>
+      </div>
+      <div class="eye-unit">
+        <div class="cyber-eye"></div>
+        <div class="eye-blush">////</div>
+      </div>
+    </div>
+
+    <!-- Dòng chữ phía dưới mắt (Scene 1: "ui cậu đẹp quá") -->
+    <div id="bottomCaptionWrap" class="fixed bottom-[18%] sm:bottom-[17%] inset-x-0 text-center px-4 z-30 pointer-events-none transition-all duration-700">
+      <p id="bottomCaption" class="font-typewriter text-lg sm:text-3xl cyber-text"></p>
+    </div>
+
+    <!-- NÚT KIM CƯƠNG XANH TƯƠNG TÁC (SCENE 3: "nên là tớ muốn") -->
+    <div id="diamondStage" class="fixed bottom-[18%] sm:bottom-[20%] inset-x-0 z-40 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 transform scale-75">
+      <div id="btnDiamond" class="diamond-btn-wrap" role="button" aria-label="Chạm để tiếp tục">
+        <div class="diamond-outer"></div>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div class="w-5 h-5 bg-sky-200 rotate-45 rounded-sm shadow-[0_0_12px_#fff]"></div>
+        </div>
+      </div>
+      <span class="mt-3 font-typewriter text-xs sm:text-sm text-sky-200/90 animate-pulse px-4 text-center">
+        chạm vào viên pha lê để nhận lời chúc ✨
+      </span>
+    </div>
+
+    <!-- PHÂN CẢNH 2: NÉT VẼ 2 NỮ SINH ÁO DÀI NÓN LÁ BÊN PHẢI (00:08 - 00:13) -->
+    <div id="aoDaiArt" class="fixed bottom-[10%] sm:bottom-[12%] right-[3%] sm:right-[12%] w-[165px] sm:w-[280px] z-20 pointer-events-none opacity-0 transition-opacity duration-1000">
+      <svg viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-[0_0_12px_rgba(253,224,71,0.55)]">
+        <!-- Nữ sinh 1 đội Nón lá -->
+        <path d="M55 78 L95 42 L135 78 Z" stroke="#fef08a" stroke-width="2" fill="rgba(254,240,138,0.05)" />
+        <path d="M55 78 Q95 88 135 78" stroke="#f472b6" stroke-width="2" />
+        <path d="M82 78 C78 96, 80 120, 88 145" stroke="#fef08a" stroke-width="1.8" />
+        <path d="M106 78 C112 105, 114 140, 108 175" stroke="#fef08a" stroke-width="1.8" />
+        <path d="M78 112 C68 155, 58 220, 48 295 L88 295 C88 235, 86 185, 88 155" stroke="#fef08a" stroke-width="1.8" />
+        <path d="M108 112 C116 160, 124 225, 130 295 L95 295" stroke="#f472b6" stroke-width="1.8" />
+        <!-- Nữ sinh 2 đứng cạnh cầm hoa -->
+        <circle cx="178" cy="76" r="18" stroke="#fef08a" stroke-width="1.8" />
+        <path d="M164 70 C152 105, 150 155, 156 195" stroke="#f472b6" stroke-width="1.8" />
+        <path d="M192 70 C204 105, 208 155, 202 195" stroke="#fef08a" stroke-width="1.8" />
+        <path d="M162 115 C152 170, 144 235, 138 295 L176 295" stroke="#fef08a" stroke-width="1.8" />
+        <path d="M194 115 C204 170, 214 235, 222 295 L182 295" stroke="#f472b6" stroke-width="1.8" />
+        <circle cx="145" cy="158" r="10" stroke="#fb7185" stroke-width="2" fill="rgba(251,113,133,0.2)" />
+        <circle cx="155" cy="152" r="8" stroke="#fef08a" stroke-width="1.8" />
+      </svg>
+    </div>
+
+    <!-- PHÂN CẢNH 4: NHỊP TIM ECG & CÔ GÁI ÔM TRÁI TIM ĐỎ PHÁT SÁNG (00:19 - 00:20) -->
+    <div id="healthArt" class="fixed inset-0 pointer-events-none z-20 opacity-0 transition-opacity duration-700">
+      <!-- Bên trái: Trái tim + sóng điện tâm đồ ECG -->
+      <div class="absolute left-[5%] sm:left-[12%] top-[52%] sm:top-[44%] w-[135px] sm:w-[230px]">
+        <svg viewBox="0 0 220 120" fill="none" class="w-full drop-shadow-[0_0_12px_rgba(244,114,182,0.8)]">
+          <path d="M55 42 C55 28, 32 22, 32 38 C32 52, 55 64, 55 72 C55 64, 78 52, 78 38 C78 22, 55 28, 55 42 Z"
+            stroke="#f472b6" stroke-width="2.2" fill="rgba(244,114,182,0.15)" />
+          <path d="M5 95 L55 95 L65 80 L74 110 L84 62 L94 106 L102 88 L110 95 L195 95"
+            stroke="#f472b6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+
+      <!-- Bên phải: Cô gái đặt tay lên trái tim đỏ rực -->
+      <div class="absolute right-[2%] sm:right-[10%] bottom-[6%] sm:bottom-[8%] w-[180px] sm:w-[320px]">
+        <svg viewBox="0 0 280 300" fill="none" class="w-full">
+          <path d="M95 30 C75 80, 65 140, 50 220" stroke="rgba(255,255,255,0.65)" stroke-width="2" />
+          <path d="M210 25 C225 85, 240 150, 255 240" stroke="rgba(255,255,255,0.65)" stroke-width="2" />
+          <path d="M50 140 C20 175, 15 235, 20 290" stroke="rgba(255,255,255,0.75)" stroke-width="2" />
+          <path d="M65 240 C95 205, 130 185, 155 170" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+          <path d="M235 250 C205 210, 180 185, 155 175" stroke="rgba(255,255,255,0.8)" stroke-width="2" stroke-linecap="round" />
+          <g class="origin-center animate-pulse" style="filter: drop-shadow(0 0 18px #ff2a5f);">
+            <path d="M160 132 C160 114, 132 106, 132 126 C132 145, 160 160, 160 172 C160 160, 188 145, 188 126 C188 106, 160 114, 160 132 Z"
+              fill="#ff2a5f" stroke="#ff9ebb" stroke-width="2" />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- PHÂN CẢNH 6: ĐĨA THAN PHÁT NHẠC, LỜI BÀI HÁT & CÔ GÁI ANIME CƯỜI TƯƠI (00:26 - 00:54) -->
+    <div id="smileMusicStage" class="fixed inset-0 pointer-events-none z-20 opacity-0 transition-opacity duration-700">
+
+      <!-- Cụm Đĩa than Vinyl & Lời bài hát (Trên điện thoại nằm gọn ở giữa trái, không đè lên cô gái) -->
+      <div class="absolute left-[6%] sm:left-[18%] top-[40%] sm:top-auto sm:bottom-[20%] flex items-center gap-3.5 sm:gap-6">
+        <div class="relative">
+          <!-- Đường dây tim bay lên từ đĩa nhạc -->
+          <svg viewBox="0 0 120 180" fill="none" class="absolute -left-8 sm:-left-12 -top-24 sm:-top-28 w-24 sm:w-28 h-36 sm:h-40 pointer-events-none opacity-80">
+            <path d="M60 160 C15 130, 10 70, 55 35 C85 15, 110 35, 95 60" stroke="#f9a8d4" stroke-width="1.5" stroke-dasharray="4 4" />
+            <text x="12" y="95" fill="#f472b6" font-size="18">♡</text>
+            <text x="68" y="25" fill="#fef08a" font-size="16">✦</text>
+            <text x="88" y="75" fill="#38bdf8" font-size="15">♪</text>
+          </svg>
+
+          <div class="vinyl-disc"></div>
+          <!-- Kim đọc đĩa than -->
+          <div class="w-10 sm:w-12 h-1.5 bg-pink-200/80 rounded-full absolute -top-2 right-1 rotate-[-32deg] origin-right shadow"></div>
+        </div>
+
+        <!-- Khung chữ Lyrics chạy theo nhạc -->
+        <div class="max-w-[165px] sm:max-w-[240px] text-left">
+          <p id="vinylLyricText" class="font-typewriter text-xs sm:text-lg text-pink-100 leading-relaxed drop-shadow-[0_0_10px_rgba(255,140,190,0.9)]">
+            chúc các bạn nữ 10A8 ✨
+          </p>
+        </div>
+      </div>
+
+      <!-- Hình vẽ Cô gái Anime cười tươi + Khóm hoa hồng bên phải (Giống video 00:26 - 00:54) -->
+      <div class="absolute right-[2%] sm:right-[14%] bottom-[7%] sm:bottom-[8%] flex items-end">
+        <!-- Cô gái Anime -->
+        <div class="w-[150px] sm:w-[245px] sway-slow">
+          <svg viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full drop-shadow-[0_0_22px_rgba(244,114,182,0.45)]">
+            <path d="M75 58 C42 95, 34 175, 42 255 C55 245, 65 215, 68 180" fill="#1e162b" stroke="#f9a8d4" stroke-width="1.6" />
+            <path d="M185 58 C218 95, 228 175, 218 255 C205 245, 195 215, 192 180" fill="#1e162b" stroke="#f9a8d4" stroke-width="1.6" />
+            <ellipse cx="130" cy="82" rx="56" ry="52" fill="#231934" />
+            <path d="M92 84 C92 122, 110 138, 130 138 C150 138, 168 122, 168 84 Z" fill="#ffe4e6" />
+            <path d="M78 78 C90 48, 118 45, 130 75 C142 45, 170 48, 182 78 C165 62, 145 68, 130 82 C115 68, 95 62, 78 78 Z" fill="#1e162b" />
+            <!-- Mắt cười híp -->
+            <path d="M104 96 Q113 86 122 96" stroke="#3b1d38" stroke-width="3.2" stroke-linecap="round" />
+            <path d="M138 96 Q147 86 156 96" stroke="#3b1d38" stroke-width="3.2" stroke-linecap="round" />
+            <ellipse cx="103" cy="107" rx="7" ry="4" fill="#fb7185" opacity="0.65" />
+            <ellipse cx="157" cy="107" rx="7" ry="4" fill="#fb7185" opacity="0.65" />
+            <!-- Nụ cười tươi -->
+            <path d="M118 111 Q130 126 142 111 Z" fill="#f43f5e" />
+            <path d="M121 112 Q130 116 139 112" stroke="#ffffff" stroke-width="2" />
+            <!-- Áo khoác Cardigan Hồng Đỏ -->
+            <path d="M84 142 L58 265 L102 272 L112 195 L148 195 L158 272 L202 265 L176 142 Z" fill="#be185d" stroke="#fbcfe8" stroke-width="1.6" />
+            <path d="M102 140 L130 182 L158 140" fill="#fff1f2" stroke="#f43f5e" stroke-width="2" />
+            <path d="M120 176 L140 188 L140 176 L120 188 Z" fill="#e11d48" />
+            <path d="M82 265 L68 315 L192 315 L178 265 Z" fill="#1f1630" stroke="#f9a8d4" stroke-width="1.2" />
+            <text x="52" y="65" fill="#fef08a" font-size="16">✦</text>
+            <text x="195" y="55" fill="#fef08a" font-size="18">✨</text>
+            <text x="180" y="125" fill="#f9a8d4" font-size="14">♡</text>
+          </svg>
+        </div>
+
+        <!-- Khóm hoa hồng tím bên phải cô gái giống trong video (00:26 - 00:54) -->
+        <div class="w-[70px] sm:w-[110px] -ml-4 mb-2 sway-slow" style="animation-delay: 1s;">
+          <svg viewBox="0 0 120 220" fill="none" class="w-full drop-shadow-[0_0_10px_rgba(244,114,182,0.5)]">
+            <path d="M35 215 Q30 140 25 85" stroke="#9d174d" stroke-width="3" stroke-linecap="round" />
+            <path d="M65 215 Q72 130 82 60" stroke="#9d174d" stroke-width="3" stroke-linecap="round" />
+            <path d="M50 215 Q52 160 55 120" stroke="#831843" stroke-width="2.5" stroke-linecap="round" />
+            <!-- Bông hoa 1 -->
+            <ellipse cx="25" cy="80" rx="16" ry="10" fill="#f472b6" />
+            <ellipse cx="25" cy="75" rx="10" ry="7" fill="#fbcfe8" />
+            <!-- Bông hoa 2 -->
+            <ellipse cx="82" cy="55" rx="18" ry="11" fill="#ec4899" />
+            <ellipse cx="82" cy="50" rx="11" ry="7" fill="#fce7f3" />
+            <!-- Bông hoa 3 -->
+            <ellipse cx="55" cy="116" rx="14" ry="9" fill="#db2777" />
+            <ellipse cx="55" cy="112" rx="8" ry="5" fill="#fbcfe8" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Nút Xem lại từ đầu nhẹ nhàng ở cuối màn hình -->
+      <div class="fixed bottom-4 inset-x-0 flex justify-center pointer-events-auto z-50">
+        <button id="btnReplayStory"
+          class="px-5 py-2 rounded-full bg-white/10 hover:bg-pink-500/30 text-pink-100 border border-pink-300/35 backdrop-blur-md font-typewriter text-xs sm:text-sm shadow-[0_0_20px_rgba(244,114,182,0.4)] active:scale-95 transition flex items-center gap-2 cursor-pointer">
+          <span>↻ Xem lại lời chúc 20/10</span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    /*************************************************************************
+     * 1. ÂM THANH GIAI ĐIỆU PIANO LÃNG MẠN (TỰ ĐỘNG BẬT KHI CHẠM MÀN HÌNH)
+     *************************************************************************/
+    let audioCtx = null;
+    let musicStarted = false;
+    let noteStep = 0;
+
+    const MELODY_NOTES = [
+      { f: 523.25, d: 1.5 }, { f: 659.25, d: 1.5 }, { f: 783.99, d: 1.8 },
+      { f: 698.46, d: 1.5 }, { f: 659.25, d: 1.5 }, { f: 587.33, d: 1.8 },
+      { f: 523.25, d: 1.6 }, { f: 493.88, d: 1.4 }, { f: 523.25, d: 2.2 }
+    ];
+
+    function initAudio() {
+      if (!audioCtx) {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (AC) audioCtx = new AC();
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      if (!musicStarted && audioCtx) {
+        musicStarted = true;
+        setInterval(() => {
+          if (!audioCtx || audioCtx.state !== 'running') return;
+          const n = MELODY_NOTES[noteStep % MELODY_NOTES.length];
+          const now = audioCtx.currentTime;
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(n.f, now);
+          gain.gain.setValueAtTime(0.001, now);
+          gain.gain.linearRampToValueAtTime(0.045, now + 0.05);
+          gain.gain.exponentialRampToValueAtTime(0.0005, now + n.d);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now);
+          osc.stop(now + n.d);
+          noteStep++;
+        }, 680);
+      }
+    }
+
+    window.addEventListener('pointerdown', initAudio, { passive: true });
+
+    /*************************************************************************
+     * 2. HỆ THỐNG CANVAS VẼ CẢNH NỀN THEO TỪNG PHÂN CẢNH VIDEO (SCENE 0 -> 6)
+     *************************************************************************/
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let W = window.innerWidth;
+    let H = window.innerHeight;
+
+    let currentScene = 0;
+    let sceneStartTime = performance.now();
+
+    const stars = [];
+    const petals = [];
+    const shootingStars = [];
+    const grassBlades = [];
+    const wildFlowers = [];
+    const constellationNodes = [];
+    const touchHearts = [];
+
+    function resizeCanvas() {
+      W = window.innerWidth;
+      H = window.innerHeight;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = W * dpr;
+      canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      const isMobile = W < 640;
+
+      // Sao lấp lánh
+      stars.length = 0;
+      const starCount = isMobile ? 95 : 150;
+      for (let i = 0; i < starCount; i++) {
+        stars.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: Math.random() * 1.4 + 0.3,
+          a: Math.random() * 0.7 + 0.2,
+          s: Math.random() * 0.003 + 0.001,
+          p: Math.random() * Math.PI * 2
+        });
+      }
+
+      // Cánh hoa hồng bay (Scene 1 & 2)
+      petals.length = 0;
+      const petalCount = isMobile ? 26 : 40;
+      for (let i = 0; i < petalCount; i++) {
+        petals.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          vx: (Math.random() - 0.3) * 0.75,
+          vy: Math.random() * 0.65 + 0.35,
+          r: Math.random() * 3.2 + 2,
+          rot: Math.random() * Math.PI * 2,
+          vRot: (Math.random() - 0.5) * 0.03
+        });
+      }
+
+      // Cỏ xanh và hoa dại (Scene 2)
+      grassBlades.length = 0;
+      const count = Math.floor(W / 3.2);
+      for (let i = 0; i < count; i++) {
+        grassBlades.push({
+          x: (i / count) * (W + 40) - 20,
+          h: (Math.random() * 58 + 36) * (isMobile ? 0.82 : 1),
+          w: Math.random() * 2 + 1.2,
+          curve: (Math.random() - 0.5) * 24,
+          color: i % 3 === 0 ? '#84cc16' : (i % 2 === 0 ? '#22c55e' : '#15803d'),
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+
+      wildFlowers.length = 0;
+      const flowerColors = ['#fb7185', '#f472b6', '#facc15', '#e879f9', '#60a5fa'];
+      const flowerCount = isMobile ? 12 : 18;
+      for (let i = 0; i < flowerCount; i++) {
+        wildFlowers.push({
+          x: (i / flowerCount) * (W * 0.72) + 16 + (Math.random() * 14 - 7),
+          h: (Math.random() * 68 + 56) * (isMobile ? 0.82 : 1),
+          color: flowerColors[i % flowerColors.length],
+          r: Math.random() * 4 + 6,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+
+      // Chòm sao (Scene 3)
+      constellationNodes.length = 0;
+      const pts = [
+        [0.08, 0.25], [0.16, 0.34], [0.24, 0.28], [0.19, 0.46], [0.11, 0.55],
+        [0.76, 0.22], [0.86, 0.31], [0.81, 0.45], [0.91, 0.53], [0.75, 0.61]
+      ];
+      pts.forEach(([nx, ny]) => {
+        constellationNodes.push({ x: nx * W, y: ny * H });
+      });
+    }
+
+    function spawnShootingStar() {
+      shootingStars.push({
+        x: Math.random() * W * 0.75 + W * 0.15,
+        y: Math.random() * H * 0.35 + 20,
+        vx: -(Math.random() * 5 + 5.5),
+        vy: Math.random() * 3 + 2.2,
+        life: 1
+      });
+    }
+
+    // Hiệu ứng chạm tay vào màn hình điện thoại nảy tim lấp lánh
+    window.addEventListener('pointerdown', (e) => {
+      for (let i = 0; i < 8; i++) {
+        const ang = (Math.PI * 2 * i) / 8 + (Math.random() - 0.5) * 0.4;
+        const spd = Math.random() * 2.4 + 1;
+        touchHearts.push({
+          x: e.clientX,
+          y: e.clientY,
+          vx: Math.cos(ang) * spd,
+          vy: Math.sin(ang) * spd - 1.2,
+          size: Math.random() * 6 + 8,
+          life: 1,
+          color: i % 2 === 0 ? '#ff7eb3' : '#00f7ff'
+        });
+      }
+    }, { passive: true });
+
+    // Vẽ khóm hoa neon hai bên & bươm bướm (Scene 5: "chúc cậu thật xinh đẹp")
+    function drawNeonFlowerBush(ctx, baseX, baseY, side, prog, time) {
+      const isMobile = W < 640;
+      const sc = isMobile ? 0.72 : 1;
+      ctx.save();
+      ctx.translate(baseX, baseY);
+      ctx.scale(sc, sc);
+
+      const stems = [
+        { cx: side * 25, cy: -80, tx: side * 18, ty: -165, r: 22 },
+        { cx: side * 55, cy: -60, tx: side * 72, ty: -125, r: 16 },
+        { cx: side * 10, cy: -45, tx: side * 38, ty: -92, r: 13 }
+      ];
+
+      stems.forEach((st, idx) => {
+        const sway = Math.sin(time * 0.002 + idx) * 6;
+        ctx.strokeStyle = 'rgba(244, 114, 182, 0.78)';
+        ctx.lineWidth = 1.6;
+        ctx.shadowColor = '#f472b6';
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.quadraticCurveTo(st.cx, st.cy * prog, st.tx + sway, st.ty * prog);
+        ctx.stroke();
+
+        if (prog > 0.4) {
+          ctx.save();
+          ctx.translate(st.tx + sway, st.ty * prog);
+          ctx.rotate(time * 0.0005 * side);
+          for (let p = 0; p < 5; p++) {
+            ctx.rotate((Math.PI * 2) / 5);
+            ctx.beginPath();
+            ctx.ellipse(0, -st.r * 0.65, st.r * 0.36, st.r * 0.65, 0, 0, Math.PI * 2);
+            ctx.stroke();
+          }
+          ctx.restore();
+        }
+      });
+
+      // Bươm bướm neon bay cạnh khóm hoa (Giống video 00:22 - 00:25)
+      if (prog > 0.6) {
+        const bx = side * 62 + Math.sin(time * 0.003) * 10;
+        const by = -185 + Math.cos(time * 0.004) * 8;
+        const wing = 0.55 + 0.45 * Math.sin(time * 0.015);
+        ctx.save();
+        ctx.translate(bx, by);
+        ctx.rotate(side * -0.25);
+        ctx.scale(wing, 1);
+        ctx.strokeStyle = '#fbcfe8';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.ellipse(-6, -4, 7, 10, -0.4, 0, Math.PI * 2);
+        ctx.ellipse(6, -4, 7, 10, 0.4, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      ctx.restore();
+    }
+
+    function renderCanvas(time) {
+      ctx.clearRect(0, 0, W, H);
+
+      // Nền gradient thay đổi theo từng phân cảnh giống video
+      const bg = ctx.createLinearGradient(0, 0, 0, H);
+      if (currentScene === 1 || currentScene === 2) {
+        bg.addColorStop(0, '#09040e');
+        bg.addColorStop(0.6, '#240b21');
+        bg.addColorStop(1, currentScene === 2 ? '#292514' : '#180716');
+      } else if (currentScene === 3) {
+        bg.addColorStop(0, '#030712');
+        bg.addColorStop(0.65, '#071936');
+        bg.addColorStop(1, '#0f2952');
+      } else {
+        bg.addColorStop(0, '#070710');
+        bg.addColorStop(0.6, '#1c1026');
+        bg.addColorStop(1, '#141222');
+      }
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, W, H);
+
+      // Vẽ sao lấp lánh
+      for (const s of stars) {
+        const tw = 0.4 + 0.6 * Math.sin(time * s.s + s.p);
+        ctx.fillStyle = `rgba(255, 255, 255, ${s.a * tw})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Sao băng
+      if (Math.random() < 0.022 && shootingStars.length < 2) spawnShootingStar();
+      for (let i = shootingStars.length - 1; i >= 0; i--) {
+        const st = shootingStars[i];
+        st.x += st.vx;
+        st.y += st.vy;
+        st.life -= 0.015;
+        if (st.life <= 0) { shootingStars.splice(i, 1); continue; }
+        const g = ctx.createLinearGradient(st.x, st.y, st.x - st.vx * 8, st.y - st.vy * 8);
+        g.addColorStop(0, `rgba(255,255,255,${st.life})`);
+        g.addColorStop(1, 'rgba(0,247,255,0)');
+        ctx.strokeStyle = g;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(st.x, st.y);
+        ctx.lineTo(st.x - st.vx * 8, st.y - st.vy * 8);
+        ctx.stroke();
+      }
+
+      // Cánh hoa anh đào rơi (Scene 1 & 2)
+      if (currentScene === 1 || currentScene === 2) {
+        for (const p of petals) {
+          p.x += p.vx + Math.sin(time * 0.002 + p.rot) * 0.3;
+          p.y += p.vy;
+          p.rot += p.vRot;
+          if (p.y > H + 10) { p.y = -10; p.x = Math.random() * W; }
+          if (p.x > W + 10) p.x = -10;
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = 'rgba(255, 145, 190, 0.78)';
+          ctx.beginPath();
+          ctx.ellipse(0, 0, p.r, p.r * 0.55, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      // Thảm cỏ xanh & hoa dại mọc lên (Scene 2: 00:08 - 00:13)
+      if (currentScene === 2) {
+        const elapsed = Math.min(1, (time - sceneStartTime) / 1200);
+        for (const f of wildFlowers) {
+          const sway = Math.sin(time * 0.0025 + f.phase) * 7;
+          const fy = H - f.h * elapsed;
+          ctx.strokeStyle = '#4ade80';
+          ctx.lineWidth = 1.8;
+          ctx.beginPath();
+          ctx.moveTo(f.x, H);
+          ctx.quadraticCurveTo(f.x, H - f.h * 0.5, f.x + sway, fy);
+          ctx.stroke();
+
+          if (elapsed > 0.35) {
+            ctx.fillStyle = f.color;
+            ctx.beginPath();
+            ctx.arc(f.x + sway, fy, f.r * elapsed, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = '#fef08a';
+            ctx.beginPath();
+            ctx.arc(f.x + sway, fy, f.r * 0.38 * elapsed, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+        for (const b of grassBlades) {
+          const sway = Math.sin(time * 0.003 + b.phase) * 6;
+          const bh = b.h * elapsed;
+          ctx.strokeStyle = b.color;
+          ctx.lineWidth = b.w;
+          ctx.beginPath();
+          ctx.moveTo(b.x, H);
+          ctx.quadraticCurveTo(b.x, H - bh * 0.5, b.x + b.curve + sway, H - bh);
+          ctx.stroke();
+        }
+      }
+
+      // Đường nối các chòm sao trên bầu trời (Scene 3: 00:14 - 00:18)
+      if (currentScene === 3) {
+        ctx.strokeStyle = 'rgba(125, 211, 252, 0.28)';
+        ctx.lineWidth = 1;
+        for (let i = 0; i < 4; i++) {
+          ctx.beginPath();
+          ctx.moveTo(constellationNodes[i].x, constellationNodes[i].y);
+          ctx.lineTo(constellationNodes[i + 1].x, constellationNodes[i + 1].y);
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.moveTo(constellationNodes[i + 5].x, constellationNodes[i + 5].y);
+          ctx.lineTo(constellationNodes[i + 6].x, constellationNodes[i + 6].y);
+          ctx.stroke();
+        }
+        for (const nd of constellationNodes) {
+          ctx.fillStyle = '#bae6fd';
+          ctx.beginPath();
+          ctx.arc(nd.x, nd.y, 2.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Khóm hoa neon & đồi tím (Scene 5: 00:21 - 00:25)
+      if (currentScene === 5) {
+        const prog = Math.min(1, (time - sceneStartTime) / 900);
+        ctx.fillStyle = 'rgba(88, 28, 135, 0.28)';
+        ctx.strokeStyle = 'rgba(244, 114, 182, 0.45)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(0, H);
+        ctx.quadraticCurveTo(W * 0.5, H - 110 * prog, W, H);
+        ctx.fill();
+        ctx.stroke();
+
+        drawNeonFlowerBush(ctx, 28, H - 16, 1, prog, time);
+        drawNeonFlowerBush(ctx, W - 28, H - 16, -1, prog, time);
+      }
+
+      // Vẽ hạt tim bay lên khi người dùng chạm màn hình
+      for (let i = touchHearts.length - 1; i >= 0; i--) {
+        const th = touchHearts[i];
+        th.x += th.vx;
+        th.y += th.vy;
+        th.life -= 0.022;
+        if (th.life <= 0) {
+          touchHearts.splice(i, 1);
+          continue;
+        }
+        ctx.save();
+        ctx.globalAlpha = th.life;
+        ctx.fillStyle = th.color;
+        ctx.shadowColor = th.color;
+        ctx.shadowBlur = 8;
+        ctx.font = `${th.size}px sans-serif`;
+        ctx.fillText('❤', th.x, th.y);
+        ctx.restore();
+      }
+
+      requestAnimationFrame(renderCanvas);
+    }
+
+    /*************************************************************************
+     * 3. KỊCH BẢN CHUYỂN CẢNH TỰ ĐỘNG GIỐNG VIDEO (SCENE 0 -> SCENE 6)
+     *************************************************************************/
+    const robotEyes = document.getElementById('robotEyes');
+    const topCaption = document.getElementById('topCaption');
+    const bottomCaption = document.getElementById('bottomCaption');
+    const leftCaptionWrap = document.getElementById('leftCaptionWrap');
+    const diamondStage = document.getElementById('diamondStage');
+    const btnDiamond = document.getElementById('btnDiamond');
+    const aoDaiArt = document.getElementById('aoDaiArt');
+    const healthArt = document.getElementById('healthArt');
+    const smileMusicStage = document.getElementById('smileMusicStage');
+    const vinylLyricText = document.getElementById('vinylLyricText');
+    const btnReplayStory = document.getElementById('btnReplayStory');
+
+    let storyTimers = [];
+    let lyricTimer = null;
+
+    function clearStoryTimers() {
+      storyTimers.forEach(t => clearTimeout(t));
+      storyTimers = [];
+      if (lyricTimer) clearInterval(lyricTimer);
+    }
+
+    function typeText(elem, text, speed = 42) {
+      elem.textContent = '';
+      let i = 0;
+      function step() {
+        i++;
+        elem.textContent = text.slice(0, i);
+        if (i < text.length) {
+          storyTimers.push(setTimeout(step, speed));
+        }
+      }
+      step();
+    }
+
+    // Chớp mắt tự động mỗi 3.2 giây
+    setInterval(() => {
+      robotEyes.classList.add('eye-blink');
+      setTimeout(() => robotEyes.classList.remove('eye-blink'), 160);
+    }, 3200);
+
+    function resetSceneUI() {
+      robotEyes.className = 'eyes-wrapper';
+      topCaption.textContent = '';
+      bottomCaption.textContent = '';
+      leftCaptionWrap.classList.add('opacity-0');
+      diamondStage.classList.add('opacity-0', 'pointer-events-none', 'scale-75');
+      diamondStage.classList.remove('scale-100');
+      aoDaiArt.classList.add('opacity-0');
+      healthArt.classList.add('opacity-0');
+      smileMusicStage.classList.add('opacity-0');
+    }
+
+    function startStorySequence() {
+      clearStoryTimers();
+      resetSceneUI();
+
+      // SCENE 0 (00:00): "Hôm nay tớ nhận lệnh từ Nam 10A8 là để..."
+      currentScene = 0;
+      sceneStartTime = performance.now();
+      typeText(topCaption, "Hôm nay tớ nhận lệnh từ Nam 10A8 là để...", 42);
+
+      // SCENE 1 (00:01 - 00:06): "ui cậu đẹp quá"
+      storyTimers.push(setTimeout(() => {
+        resetSceneUI();
+        currentScene = 1;
+        sceneStartTime = performance.now();
+        robotEyes.classList.add('eyes-squint');
+        typeText(bottomCaption, "ui cậu đẹp quá", 55);
+      }, 3200));
+
+      // SCENE 2 (00:07 - 00:13): "à thì cũng sắp 20/10 rồi" + Áo dài Nón lá & Cỏ hoa
+      storyTimers.push(setTimeout(() => {
+        resetSceneUI();
+        currentScene = 2;
+        sceneStartTime = performance.now();
+        robotEyes.classList.add('eyes-scene-2');
+        leftCaptionWrap.classList.remove('opacity-0');
+        aoDaiArt.classList.remove('opacity-0');
+      }, 7200));
+
+      // SCENE 3 (00:14 - 00:18): "nên là tớ muốn" + Nút Kim Cương Xanh
+      storyTimers.push(setTimeout(() => {
+        resetSceneUI();
+        currentScene = 3;
+        sceneStartTime = performance.now();
+        robotEyes.classList.add('eyes-happy-arc');
+        typeText(topCaption, "nên là tớ muốn", 50);
+        diamondStage.classList.remove('opacity-0', 'pointer-events-none', 'scale-75');
+        diamondStage.classList.add('scale-100');
+      }, 12500));
+    }
+
+    // Khi chạm vào Nút Kim Cương Xanh ở Scene 3 -> Chạy tiếp Scene 4, 5, 6!
+    function continueAfterDiamond(e) {
+      if (e) e.stopPropagation();
+      initAudio();
+      clearStoryTimers();
+      resetSceneUI();
+
+      // SCENE 4 (00:19 - 00:20): "chúc cậu thật nhiều sức khỏe"
+      currentScene = 4;
+      sceneStartTime = performance.now();
+      robotEyes.classList.add('eyes-wink-left');
+      healthArt.classList.remove('opacity-0');
+      typeText(topCaption, "chúc cậu thật nhiều sức khỏe", 45);
+
+      // SCENE 5 (00:21 - 00:25): "chúc cậu thật xinh đẹp"
+      storyTimers.push(setTimeout(() => {
+        resetSceneUI();
+        currentScene = 5;
+        sceneStartTime = performance.now();
+        typeText(topCaption, "chúc cậu thật xinh đẹp", 45);
+      }, 3800));
+
+      // SCENE 6 (00:26+): "và chúc cậu luôn giữ nụ cười trên môi" + Đĩa than + Anime Girl
+      storyTimers.push(setTimeout(() => {
+        resetSceneUI();
+        currentScene = 6;
+        sceneStartTime = performance.now();
+        robotEyes.classList.add('eyes-music-pos');
+        smileMusicStage.classList.remove('opacity-0');
+        typeText(topCaption, "và chúc cậu luôn giữ nụ cười trên môi", 42);
+
+        const lyrics = [
+          "chúc các bạn nữ 10A8 ✨",
+          "luôn rạng rỡ và tỏa sáng 🌸",
+          "mỗi ngày đến lớp đều vui 💖",
+          "gặp thật nhiều may mắn 🍀",
+          "mãi là thanh xuân đẹp nhất 🌷",
+          "Happy Women's Day 20/10! 💌"
+        ];
+        let lIdx = 0;
+        lyricTimer = setInterval(() => {
+          lIdx = (lIdx + 1) % lyrics.length;
+          vinylLyricText.textContent = lyrics[lIdx];
+          // Thỉnh thoảng mắt nhắm ngang tận hưởng âm nhạc giống cuối video (00:45)
+          if (lIdx % 2 === 1) {
+            robotEyes.classList.add('eyes-music-line');
+            setTimeout(() => robotEyes.classList.remove('eyes-music-line'), 900);
+          }
+        }, 2800);
+      }, 7800));
+    }
+
+    btnDiamond.addEventListener('click', continueAfterDiamond);
+    btnDiamond.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      continueAfterDiamond(e);
+    });
+
+    btnReplayStory.addEventListener('click', (e) => {
+      e.stopPropagation();
+      startStorySequence();
+    });
+
+    window.addEventListener('resize', resizeCanvas);
+    window.onload = () => {
+      resizeCanvas();
+      requestAnimationFrame(renderCanvas);
+      startStorySequence();
+    };
+  </script>
+</body>
+</html>
